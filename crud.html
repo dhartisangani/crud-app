@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="crud.css" />
+  <script src="crud.js"></script>
+
+  <title>CRUD Application</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="header">CRUD Operation</h2>
+    <div class="row">
+      <div class="form_group">
+        <div class="form_detail">
+          <label for="Name">Name: </label>
+          <input type="text" name="name" class="form_control" id="name" placeholder="Enter Your Name" />
+          <span id="message_1" style="color: red" onkeypress=""> </span>
+        </div>
+        <div class="form_detail">
+          <label for="Name">DOB: </label>
+          <input type="date" name="DOB" class="form_control birthdate" id="dob" placeholder="Enter Your DOB" />
+          <span id="message_2" style="color: red"> </span>
+        </div>
+        <div class="form_detail">
+          <label for="Name">Address: </label>
+          <input type="text" name="address" class="form_control" id="address" placeholder="Enter Your Address" />
+          <span id="message_3" style="color: red"> </span>
+        </div>
+        <div class="form_detail">
+          <label for="Name">Email: </label>
+          <input type="email" name="email" class="form_control" id="email" placeholder="Enter Your Email" />
+          <span id="message_4" style="color: red"> </span>
+        </div>
+        <div name="myform" class="form_detail">
+          <label for="Name">Salary: </label>
+          <input type="text" name="salary" class="form_control" id="salary" placeholder="Salary Per Month" />
+          <!-- onkeypress=" if ( isNaN(this.value + String.fromCharCode(event.keyCode) )){alert('enter numbers only')}  return false" -->
+          <span id="message_5" style="color: red"> </span>
+        </div>
+        <div class="button">
+          <button onclick="AddData()" class="btn btn-success" type="submit" id="submit">
+            Add Data
+          </button>
+          <button class="btn btn-primary" type="submit" id="update">
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row_1">
+      <div class="searchbox">
+        <input type="text" name="search" class="search" id="searchinput" placeholder="Search......"
+          onkeyup="Searchdata()" />
+
+        <form action="" id="list">
+          <div class="multiselect">
+            <div class="selectbox" onclick="showCheckboxes()">
+              <select class="option">
+                <option>select</option>
+              </select>
+              <div class="overselect"></div>
+            </div>
+            <div id="checkBoxes">
+              <lable for="Name" class="select"><input type="checkbox" value="Name" name="getdata" class="Name"
+                  onchange="getSelectvalue()" />Name
+              </lable>
+              <lable for="DOB" class="select"><input type="checkbox" value="DOB" name="getdata" class="DOB"
+                  onchange="getSelectvalue()" />DOB
+              </lable>
+              <lable for="Email" class="select"><input type="checkbox" value="Email" name="getdata" class="Email"
+                  onchange="getSelectvalue()" />Email
+              </lable>
+              <lable for="Salary" class="select"><input type="checkbox" value="Salary" name="getdata" class="Salary"
+                  onchange="getSelectvalue()" />Salary</lable>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- <option class="select" id="name_col" value="Name"><input type="checkbox"> Name</option>
+                <option class="select" id="DOB_col" value="DOB"><input type="checkbox">DOB</option>
+                <option class="select" id="Email_col" value="Email"><input type="checkbox">C</option>
+                <option class="select" id="Salary_col" value="Salary"><input type="checkbox">Salary</option> -->
+
+      <div class="col">
+        <table class="table table-bordered" id="crudTable">
+          <thead>
+            <!-- <tr>
+              <th>Id</th>
+              <th>
+                <input type="checkbox" for="selectAll" id="check_box" onclick="selectAll(this)" />
+                Select All
+              </th>
+              <th>Name</th>
+              <th>DOB</th>
+              <th>address</th>
+              <th>Emali</th>
+              <th>Salary</th>
+              <th>
+                Action
+                <button class="btn btn-danger" type="delete all" id="deleteall" onclick="deleteRow()">
+                  Delete All Selected
+                </button>
+              </th>
+            </tr> -->
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

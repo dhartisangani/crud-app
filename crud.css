@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@300&display=swap");
+
+body {
+  background: radial-gradient(rgb(51, 52, 54) 0%, rgb(6, 4, 33) 97.5%);
+}
+
+* {
+  margin: 0px;
+  padding: 1px;
+  font-family: "Roboto Slab", serif;
+  color: whitesmoke;
+}
+#update {
+  display: none;
+}
+
+#message_1 {
+  color: red;
+  /* background-color: rgb(215, 144, 144); */
+}
+
+#deleteall {
+  display: block;
+  margin-left: 25%;
+  margin-top: -21px;
+}
+
+.container {
+  align-items: center;
+  width: 100%;
+  margin: 25px;
+}
+
+.header {
+  font-size: 29px;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  display: grid;
+  align-items: center;
+}
+
+.form_detail {
+  display: grid;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form_control {
+  width: 100%;
+  padding: 5px;
+  /* border: 1px solid rgba(238, 232, 232, 0.234); */
+  border-radius: 5px;
+  color: black;
+  background-color: whitesmoke;
+  outline: none;
+  font-weight: bold;
+}
+.button {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.btn-success {
+  margin-right: 10px;
+}
+
+.row {
+  margin: auto;
+  width: 40%;
+  margin-bottom: 25px;
+}
+
+.row_1 {
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.table {
+  width: 64%;
+  margin-right: 52px;
+  background: rgb(39 37 62);
+  box-shadow: 0px 0px 3px 1px #aba9cb;
+  border: 1px solid rgb(92, 90, 90);
+}
+.btn-danger {
+  margin-right: 10px;
+}
+
+.searchbox {
+  font-family: inherit;
+  margin-top: 20;
+  width: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  width: 62%;
+  padding: 4px;
+  color: black;
+  background-color: whitesmoke;
+  font-weight: bold;
+  margin-right: 1px;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* .sbtn{
+  width: 5%;
+  border-radius: 5px;
+  padding: 4px;
+} */
+.select {
+  color: black;
+  font-weight: bold;
+}
+
+.defult {
+  color: black;
+}
+
+.newbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* for dropdowncheckbox */
+.multiselect {
+  width: 104%;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  cursor: copy;
+  color: black;
+  margin-left: 1px;
+  font-weight: bold;
+}
+
+.selectbox {
+  position: relative;
+  outline: none;
+  color: black;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.option {
+  width: 100%;
+  font-weight: bold;
+  outline: none;
+}
+.option option {
+  display: none;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.select {
+  width: 100%;
+  font-weight: bold;
+  display: inline-block;
+}
+.select input {
+  margin-left: 5px;
+  margin-right: 9px;
+}
+
+#checkBoxes {
+  position: absolute;
+  width: 74px;
+  display: none;
+  background-color: whitesmoke;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#checkBoxes label {
+  display: block;
+  margin-left: 5px;
+}
+
+#checkBoxes :hover {
+  background-color: #cbd1ec;
+}
+
+/* @media only screen and(max-width: 962px) {
+  .row {
+    margin: auto;
+    width: 100%;
+  }
+
+  .header {
+    font-size: 10px;
+  }
+} ; */
